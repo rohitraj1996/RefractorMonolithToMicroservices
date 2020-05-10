@@ -10,9 +10,9 @@ services:
     image: rohitraj1996/udagram-api-user:"$VERSION"
   backend_feed:
     build:
-      context: ../../udagram-api-feed
+      context: ../udagram-api-feed
     image: rohitraj1996/udagram-api-feed:"$VERSION"
   frontend:
     build:
-      context: ../../udagram-frontend
+      context: ../udagram-frontend
     image: rohitraj1996/udagram-frontend:local
