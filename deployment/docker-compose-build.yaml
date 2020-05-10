@@ -2,7 +2,7 @@ version: "3"
 services:
   reverseproxy:
     build:
-      context: .
+      context: ./
     image: rohitraj1996/reverseproxy:"$VERSION"
   backend_user:
     build:
