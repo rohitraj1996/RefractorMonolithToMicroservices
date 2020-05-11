@@ -18,11 +18,11 @@ before_install:
 
 
 install:
-  - docker-compose -f deployment/docker-compose-build.yaml build
+  - docker-compose -f deployment/docker-compose-build.yaml build --parallel
 
 after_script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker image push "$DOCKER_USERNAME"/reverseproxy:"$VERSION"
-  - docker image push "$DOCKER_USERNAME"/udagram-api-feed:"$VERSION"
-  - docker image push "$DOCKER_USERNAME"/udagram-api-user:"$VERSION"
-  - docker image push "$DOCKER_USERNAME"/udagram-frontend:"$VERSION"
+  - docker image push "$DOCKER_USERNAME"/reverseproxy"
+  - docker image push "$DOCKER_USERNAME"/udagram-api-feed"
+  - docker image push "$DOCKER_USERNAME"/udagram-api-user"
+  - docker image push "$DOCKER_USERNAME"/udagram-frontend"
