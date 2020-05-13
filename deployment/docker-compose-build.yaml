@@ -1,6 +1,18 @@
 version: "3"
 services:
+  reverseproxy:
+    build:
+      context: .
+    image: rohitraj1996/reverseproxy
   backend_user:
     build:
       context: ../udagram-api-user
     image: rohitraj1996/udagram-api-user
+  backend_feed:
+    build:
+      context: ../udagram-api-feed
+    image: rohitraj1996/udagram-api-feed
+  frontend:
+    build:
+      context: ../udagram-frontend
+    image: rohitraj1996/udagram-frontend:local
